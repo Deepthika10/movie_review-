@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineScope - Review Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎬 CineScope Timeline</h1>
+            <p>Browse, filter, and manage all the latest reviews.</p>
+        </header>
+
+        <div class="timeline-controls">
+            <div class="filter-group">
+                <label for="rating-filter">Filter by Rating:</label>
+                <select id="rating-filter">
+                    <option value="all">All Ratings</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+            </div>
+            <a href="index.html" class="back-link">⬅️ Add a New Review</a>
+        </div>
+
+        <div id="timeline-container">
+            <p class="loading-text">Loading reviews...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="timeline.js"></script>
+</body>
+</html>
