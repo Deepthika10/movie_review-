@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineScope - Add a Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎬 CineScope</h1>
+            <p>Your vision, your review. Add a new movie review below.</p>
+        </header>
+
+        <form id="review-form">
+            <div class="form-group">
+                <label for="reviewer-name">Your Name</label>
+                <input type="text" id="reviewer-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="movie-title">Movie Title</label>
+                <input type="text" id="movie-title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Rating (1-5)</label>
+                <select id="rating" required>
+                    <option value="">Select a rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="review-note">Review Note (Optional)</label>
+                <textarea id="review-note" rows="4"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn">Submit Review</button>
+        </form>
+        
+        <div class="view-timeline-link">
+            <a href="timeline.html">View All Reviews ➡️</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
