@@ -1,0 +1,195 @@
+/* Color Palette */
+:root {
+    --bg-color: #f0f8ff;      /* AliceBlue - a very light blue-white */
+    --primary-blue: #0077b6;  /* A strong, professional blue */
+    --accent-pink: #ff69b4;   /* HotPink for highlights */
+    --accent-yellow: #ffd700; /* Gold for stars and highlights */
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-top: 5px solid var(--primary-blue);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+header p {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--accent-pink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #e0559f;
+    transform: translateY(-2px);
+}
+
+.view-timeline-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--accent-pink);
+}
+
+/* Timeline Page Styles */
+.timeline-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-group label {
+    margin-right: 10px;
+}
+
+.filter-group select {
+    width: auto;
+    min-width: 150px;
+}
+
+.review-card {
+    background-color: #fdfdfd;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-blue);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+.review-card:hover {
+    transform: translateY(-3px);
+}
+
+.review-card h3 {
+    margin: 0 0 5px 0;
+    color: var(--primary-blue);
+}
+
+.review-info {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.review-rating {
+    color: var(--accent-yellow);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-note {
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.delete-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+}
